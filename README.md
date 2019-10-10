@@ -6,5 +6,9 @@ It currently contains the following algorithms
 
 
 ## Usage
+You will need: 
+1. make
+2. a C compiler
+
 Compile and run: ```make && ./main```
 Clean: ```make clean```
