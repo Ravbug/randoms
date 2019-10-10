@@ -11,4 +11,5 @@ You will need:
 2. a C compiler
 
 Compile and run: ```make && ./main```
+
 Clean: ```make clean```
