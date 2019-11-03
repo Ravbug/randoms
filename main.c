@@ -6,14 +6,17 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "ramdom.c"
+#include <time.h>
 
 int main(){
 	//set the "seed"
 	//by definition, undefined behavior cannot be
 	//seeded or predicted. However, changing this value
 	//will affect the pattern of output.
-	ramseed = 35796;
+	clock_t time_1 = clock();
+	ramseed = time_1;
 	printf("ramseed = %d\n",ramseed);
 
 	// ======= demonstration ==========
