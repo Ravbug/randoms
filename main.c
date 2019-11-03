@@ -21,7 +21,11 @@ int main(){
 	const int min = 1;
 	const int max = 100;
 	const int runs = 250;
-	int dist[max-min] = {0};
+	int dist[max-min];
+
+	for (int i = 0; i < (max-min); i++){
+		dist[i]=0;
+	}
 	
 	//run the experiment, print each
 	//value and update the histogram
