@@ -13,7 +13,7 @@ float devrand(){
 	
 	//declare amount of data to use
 	int amt = 2;
-	long data[amt];
+	int data[amt];
 
 	// read in the data
 	fread(&data, 1, amt, file);
