@@ -4,6 +4,7 @@
 
 /**
 Generates a random number between 0 and 1 using /dev/random
+@note This function only works on systems where /dev/random exists and behaves as expected
 @return a float on interval [0,1)
 */
 float devrand(){
@@ -45,8 +46,4 @@ float devrand(){
 */
 float devrand_range(int min, int max){
 	return devrand() * (max-min) + min;
-}
-
-int main(){
-	printf("%f\n",devrand_range(0,100));
 }
