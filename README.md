@@ -3,6 +3,7 @@ This repository contains terrible random functions I have written.
 
 It currently contains the following algorithms
 1. RAM Random (aka RAMdom), an undefined behavior based random algorithm (C)
+2. DevRandom (aka devrand), a randomizer that uses `/dev/random` (C)
 
 
 RAMdom distribution chart
@@ -114,7 +115,7 @@ You will need:
 1. make
 2. a C compiler
 
-Compile and run: ```make && ./main```
+To run the sample program, run in terminal: ```make && ./main```
 
 Clean: ```make clean```
 
