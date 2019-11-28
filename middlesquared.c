@@ -1,5 +1,4 @@
 
-#include <stdio.h>
 
 //the seed and precision for this rng
 unsigned int msseed = 1834659;
@@ -21,11 +20,4 @@ Uses msrand() to generate a value on [min,max)
 */
 float msrand_range(float min, float max){
 	return msrand() * (max - min) + min;
-}
-
-int main(){
-	for (int i = 0; i < 30; i++){
-		printf("%d ",(int)msrand_range(1,100));
-	}
-	printf("\n");
 }

@@ -1,6 +1,4 @@
 
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
 Generates a random number between 0 and 1 using /dev/random

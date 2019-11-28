@@ -7,9 +7,6 @@
 //	Author: Ravbug (https://github.com/ravbug)
 //
 
-#include <stdio.h>
-#include <stdlib.h>
-
 unsigned short ramseed;
 
 /**
