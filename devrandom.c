@@ -44,6 +44,6 @@ float devrand(){
  @param max the largest possible value (exclusive)
  @return a random float on [0,1)
 */
-float devrand_range(int min, int max){
+float devrand_range(float min, float max){
 	return devrand() * (max-min) + min;
 }

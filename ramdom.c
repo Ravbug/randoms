@@ -40,6 +40,6 @@ float ramdom(){
  @param max the largest possible value (exclusive)
  @return the [0,1) float remapped to [min,max)
  */
-float ramdom_range(int min, int max){
+float ramdom_range(float min, float max){
 	return ramdom() * (max-min) + min;
 }
