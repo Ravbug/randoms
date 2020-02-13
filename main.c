@@ -10,6 +10,7 @@
 #include "ramdom.c"
 #include "devrandom.c"
 #include "middlesquared.c"
+#include "ramdom2.c"
 #include <time.h>
 
 #define array_size(a) (sizeof(a)/sizeof(a[0]))
@@ -30,7 +31,7 @@ Prints the histogram for a run array
 @param array the array containing the histogram
 @param size the size of the array
 */
-void print_dist(int array[],int size){
+void print_dist(const int array[],int size){
 	for(int i = 0; i < size; i++){
 		printf("%d: ",i);
 		for (int j = 0; j < array[i]; j++){
@@ -81,6 +82,8 @@ int main(){
 		//print the histogram
 		print_dist(dist, array_size(dist));
 	}
+// on macOS this function fails with Bus Error: 10
+#ifndef __APPLE__
 	{
 		printf("\nRunning devrand\n");
 		clear(dist, array_size(dist));
@@ -88,10 +91,18 @@ int main(){
 		printf("\n");
 		print_dist(dist, array_size(dist));
 	}
+#endif
 	{
 		printf("\nRunning msrand\n");
 		clear(dist, array_size(dist));
 		run_test(msrand_range, dist, runs, min, max);
+		printf("\n");
+		print_dist(dist, array_size(dist));
+	}
+	{
+		printf("Running ramdom2\n");
+		clear(dist, array_size(dist));
+		run_test(ramdom_range, dist, runs, min, max);
 		printf("\n");
 		print_dist(dist, array_size(dist));
 	}

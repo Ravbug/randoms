@@ -3,7 +3,9 @@ This repository contains terrible random functions I have written.
 
 It currently contains the following algorithms
 1. RAM Random (aka RAMdom), an undefined behavior based random algorithm (C)
+2. RAM Random 2 (aka RAMdom2), a far leaner version of RAMdom
 2. DevRandom (aka devrand), a randomizer that uses `/dev/random` (C)
+3. msrand, a poor implementation of the middle-squared method
 
 
 RAMdom distribution chart
